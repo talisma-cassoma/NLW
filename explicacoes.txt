@@ -1,0 +1,55 @@
+a resposividade--
+
+mobile firpag nas medidas do telefone e depois adaptr pra pc
+por exemplo: 
+font-size: 60%; é pra poder adaptar o tamanho do letra ao telefone 
+----
+box-sizing: border-box;/*mantem o width do tamanho que definiste por mais que o conteudo da box seja maior que a width que definiste*/
+
+justify-content: /*sao todas propridedaes do flex*/
+justify-self: /*sao todas propridedaes do grid */ 
+---
+outline /*linha que aparece quando clica no box do input*/
+-------
+
+.input-block{
+	position: relative;/*é necessario declarar a position para que ::after encotre a box */  
+}
+.input-block:focus-within::after{
+	content: "";/*o objeto de referencia*/
+	width: calc(100% - 3.2rem);/*subtai 3.2rem a 100% da lugura*/
+	height: 2px;
+	background:  var(--color-primary-light);
+	position: absolute;/*para a linha se sobrepor */
+	left: 1.6rem;
+	bottom: 0;/*coloca a linha no bottom du input em questao*/
+}
+--------
+
+	display: block;/*o display block,ocupa todo espaco lateral resta,te obrigando o conteu do a seguir pra baixo */
+	------
+
+	o popridade margin nao se aplica ao display: inline ;
+	-------
+		justify-content: space-evenly; 
+		------
+		flex: 1 1; /*poe os elementos um abaixo do outro*/
+		--------
+		no documento html
+		<link rel="shortcut icon" href="/imagens/favicon.png" type="image/png">
+serve pra por aquelas imagens no link da pagina	  
+--------
+o botao type="submit"  deve estaer dentro do formulario form , caso nao tem se declarar o id dp form dentro do botao :
+<button type="submit" form="id do form em questao"></button>
+--------------
+
+para melhor saida de animacao mais suaveis e consitentes 
+a gente define ja a transitions:tempo s; no obejto e depois é so animar no hover ou onde quizeres 
+observe so nos css aqui
+-----------   
+INVESTIGAR SOBRE:
+-backend com nodejs
+-nodejs
+-servidor
+-template engine 
+-nunjs

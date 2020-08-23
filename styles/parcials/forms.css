@@ -1,0 +1,39 @@
+.select-block label,
+.input-block label,
+.textarea-block label{
+	font-size: 1.4rem;
+	color: var(--color-text-complement);
+}
+
+.input-block input, 
+.select-block select,
+.textarea-block textarea{
+	width: 100%;
+	height: 5.6rem;
+	margin-top:0.8rem; 
+	border-radius:0.8rem;
+	background: var(--color-input-background); 
+	border:1px sloid var(--color-line-in-white);
+	outline: 0;
+	padding: 0 1.6rem;
+	font: 1.6rem Archivo;  
+}
+.textarea-block textarea{
+	padding: 1.2rem 1.6rem;
+	height: 16rem;
+	resize: vertical;/* permite modificar o tamanho do textarea mas so na vertical vertical*/
+}
+.input-block,
+.textarea-block{
+	position: relative;/*é necessario declarar a position para que ::after encotre a box */  
+}
+.input-block:focus-within::after,
+.textarea-block:focus-within::after{
+	content: "";/*o objeto de referencia*/
+	width: calc(100% - 3.2rem);/*subtai 3.2rem a 100% da lugura*/
+	height: 2px;
+	background:  var(--color-primary-light);
+	position: absolute;/*para a linha se sobrepor */
+	left: 1.6rem;
+	bottom: 0;/*coloca a linha no bottom du input em questao*/
+}
